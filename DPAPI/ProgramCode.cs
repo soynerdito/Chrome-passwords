@@ -328,15 +328,14 @@ public static class ProgramCode
 {
     
 
-    public static void LetsDothis(string[] args)
+    public static void LetsDothis(string db_way)
     {
         
-        try
-        {
+        //try
+        //{
             string filename = "my_chrome_passwords.html"; 
             //StreamWriter Writer = new StreamWriter(filename, false, Encoding.UTF8);
-            string db_way = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
-				+ "/Google/Chrome/User Data/Default/Login Data"; // a path to a database file
+            
 			Console.WriteLine("DB file = " + db_way);
             string db_field = "logins";   // DB table field name
             byte[] entropy = null; // DPAPI class does not use entropy but requires this parameter
@@ -362,7 +361,7 @@ public static class ProgramCode
                 int rows = DB.Rows.Count;
                 for (int i = 0; i < rows; i++)
                 {
-                    Console.Write(i + 1 ); // Here we print order number of our trinity "site-login-password"
+                    Console.Write(i + 1 ); // Here we print order number of our trinity "site-login-password"                    
                     Console.WriteLine(String.Format(" . Site: {0}" , DB.Rows[i][1]) ); // site URL
                     //Console.WriteLine(DB.Rows[i][3]  ); // login
                     // Here the password description
@@ -375,12 +374,13 @@ public static class ProgramCode
                 }
             }
             //Writer.Close();            
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-            ex = ex.InnerException;            
-        }
+        //}
+        //catch (Exception ex)
+        //{
+            
+        //    Console.WriteLine(ex.Message);
+        //    ex = ex.InnerException;            
+        //}
     }
     
 }
