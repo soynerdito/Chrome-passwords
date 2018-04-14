@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f708d887-3c50-41e1-b5fe-76499fe1cd9d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SqliteClient</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteClientFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteCommandBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteConnectionStringBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteDataAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteDataReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteDataSourceEnumerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteExceptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteParameterCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteRowUpdatedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteRowUpdatedEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteRowUpdatingEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteRowUpdatingEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite.SQLiteClient\SqliteTransaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\alter_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\analyze_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\attach_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\auth_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\backup_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\bitvec_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\btmutex_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\BtreeInt_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\btree_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\Btree_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\build_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\callback_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\complete_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\crypto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\ctime_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\date_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\Delegates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\delete_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\expr_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\fault_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\fkey_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\func_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\global_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\hash_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\Hash_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\hwtime_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\insert_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\journal_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\keywordhash_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\legacy_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\loadext_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\main_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\malloc_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\memjournal_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\mem_Pool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\mutex_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\mutex_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\mutex_noop_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\mutex_w32.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\notify_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\opcodes_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\opcodes_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\os_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\os_common_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\os_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\os_win_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pager_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pager_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\parse_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\parse_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pcache1_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pcache_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pcache_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\pragma_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\prepare_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\printf_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\random_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\resolve_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\rowset_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\select_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\sqlite3_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\sqliteInt_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\sqliteLimit_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\status_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\table_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\tokenize_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\trigger_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\update_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\utf_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\util_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vacuum_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbeapi_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbeaux_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbeblob_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\VdbeInt_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbemem_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbetrace_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vdbe_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\Vdbe_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\vtab_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\walker_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\wal_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\wal_h.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\where_c.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Community.CsharpSqlite\_Custom.cs" />
+  </ItemGroup>
+</Project>

